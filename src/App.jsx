@@ -11,7 +11,7 @@ function App() {
 
   const getUsers = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/person");
+      const res = await axios.get("https://prova-senai-is-backend.onrender.com");
       setList(res.data);
       console.log(res.data); 
     } catch (error) {
@@ -21,7 +21,7 @@ function App() {
 
   const registerUser = async () => {
     try { 
-      await axios.post("http://localhost:8080/api/person",{
+      await axios.post("https://prova-senai-is-backend.onrender.com",{
         name, lastname, salary
       });
     } catch (error) {
@@ -31,7 +31,7 @@ function App() {
 
   const deleteUser = async (id) => {
     try { 
-      await axios.delete(`http://localhost:8080/api/person/${id}`);
+      await axios.delete(`https://prova-senai-is-backend.onrender.com/${id}`);
       getUsers()
     } catch (error) {
       console.error("Erro ao inserir", error);
